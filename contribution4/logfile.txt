@@ -1,0 +1,1 @@
+['clean_drum_by_hand', 'is_tilted_mirror_bright_and_clean', 'manually_project_laser_on_drum', 'different_type_of_toner', 'replace_charge_roller']

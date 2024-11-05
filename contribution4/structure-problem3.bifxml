@@ -1,0 +1,319 @@
+<?xml version="1.0" ?>
+
+<BIF VERSION="0.3">
+<NETWORK>
+
+<!-- Variables -->
+<VARIABLE TYPE="nature">
+	<NAME>PresentMovementOutputswiper</NAME>
+	<PROPERTY>PresentMovementOutputswiper</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthwiper</NAME>
+	<PROPERTY>healthwiper</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentPowerInputswiper</NAME>
+	<PROPERTY>PresentPowerInputswiper</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentControl_signalInputswiper</NAME>
+	<PROPERTY>PresentControl_signalInputswiper</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentFocussedLaserbeamOutputslens</NAME>
+	<PROPERTY>PresentFocussedLaserbeamOutputslens</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthlens</NAME>
+	<PROPERTY>healthlens</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentLaserbeamInputslens</NAME>
+	<PROPERTY>PresentLaserbeamInputslens</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentMovingBeamOutputstilted_mirror</NAME>
+	<PROPERTY>PresentMovingBeamOutputstilted_mirror</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthtilted_mirror</NAME>
+	<PROPERTY>healthtilted_mirror</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentPowerInputstilted_mirror</NAME>
+	<PROPERTY>PresentPowerInputstilted_mirror</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentControlSignalInputstilted_mirror</NAME>
+	<PROPERTY>PresentControlSignalInputstilted_mirror</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentMovingTonerParticlesOutputsdeveloper_roll</NAME>
+	<PROPERTY>PresentMovingTonerParticlesOutputsdeveloper_roll</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthdeveloper_roll</NAME>
+	<PROPERTY>healthdeveloper_roll</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentPowerInputsdeveloper_roll</NAME>
+	<PROPERTY>PresentPowerInputsdeveloper_roll</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentTonerParticlesInputsdeveloper_roll</NAME>
+	<PROPERTY>PresentTonerParticlesInputsdeveloper_roll</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentElectricalChargeOutputscharge_roll</NAME>
+	<PROPERTY>PresentElectricalChargeOutputscharge_roll</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthcharge_roll</NAME>
+	<PROPERTY>healthcharge_roll</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentPowerInputscharge_roll</NAME>
+	<PROPERTY>PresentPowerInputscharge_roll</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentImageInTonerOutputsdrum</NAME>
+	<PROPERTY>PresentImageInTonerOutputsdrum</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthdrum</NAME>
+	<PROPERTY>healthdrum</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>What_to_do</NAME>
+	<PROPERTY>What is the next step?</PROPERTY>
+	<OUTCOME>clean_drum_by_hand</OUTCOME>
+	<OUTCOME>is_tilted_mirror_bright_and_clean</OUTCOME>
+	<OUTCOME>manually_project_laser_on_drum</OUTCOME>
+	<OUTCOME>different_type_of_toner</OUTCOME>
+	<OUTCOME>replace_charge_roller</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>utility_wiper</NAME>
+	<PROPERTY>utility_wiper</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>utility_lens</NAME>
+	<PROPERTY>utility_lens</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>utility_tilted_mirror</NAME>
+	<PROPERTY>utility_tilted_mirror</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>utility_developer_roll</NAME>
+	<PROPERTY>utility_developer_roll</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>utility_charge_roll</NAME>
+	<PROPERTY>utility_charge_roll</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<!-- Probability distributions -->
+<DEFINITION>
+	<FOR>PresentMovementOutputswiper</FOR>
+	<GIVEN>PresentPowerInputswiper</GIVEN>
+	<GIVEN>healthwiper</GIVEN>
+	<GIVEN>PresentControl_signalInputswiper</GIVEN>
+	<TABLE>0.99 0.01 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthwiper</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentPowerInputswiper</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentControl_signalInputswiper</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentFocussedLaserbeamOutputslens</FOR>
+	<GIVEN>healthlens</GIVEN>
+	<GIVEN>PresentLaserbeamInputslens</GIVEN>
+	<TABLE>0.99 0.01 0.01 0.99 0.01 0.99 0.01 0.99 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthlens</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentLaserbeamInputslens</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentMovingBeamOutputstilted_mirror</FOR>
+	<GIVEN>PresentControlSignalInputstilted_mirror</GIVEN>
+	<GIVEN>PresentFocussedLaserbeamOutputslens</GIVEN>
+	<GIVEN>PresentPowerInputstilted_mirror</GIVEN>
+	<GIVEN>healthtilted_mirror</GIVEN>
+	<TABLE>0.99 0.01 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthtilted_mirror</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentPowerInputstilted_mirror</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentControlSignalInputstilted_mirror</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentMovingTonerParticlesOutputsdeveloper_roll</FOR>
+	<GIVEN>PresentPowerInputsdeveloper_roll</GIVEN>
+	<GIVEN>healthdeveloper_roll</GIVEN>
+	<GIVEN>PresentTonerParticlesInputsdeveloper_roll</GIVEN>
+	<TABLE>0.99 0.01 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthdeveloper_roll</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentPowerInputsdeveloper_roll</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentTonerParticlesInputsdeveloper_roll</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentElectricalChargeOutputscharge_roll</FOR>
+	<GIVEN>PresentPowerInputscharge_roll</GIVEN>
+	<GIVEN>healthcharge_roll</GIVEN>
+	<TABLE>0.99 0.01 0.01 0.99 0.01 0.99 0.01 0.99 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthcharge_roll</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentPowerInputscharge_roll</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentImageInTonerOutputsdrum</FOR>
+	<GIVEN>PresentMovementOutputswiper</GIVEN>
+	<GIVEN>PresentElectricalChargeOutputscharge_roll</GIVEN>
+	<GIVEN>PresentMovingBeamOutputstilted_mirror</GIVEN>
+	<GIVEN>healthdrum</GIVEN>
+	<GIVEN>PresentMovingTonerParticlesOutputsdeveloper_roll</GIVEN>
+	<TABLE>0.99 0.01 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthdrum</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>utility_wiper</FOR>
+	<GIVEN>What_to_do</GIVEN>
+	<GIVEN>healthwiper</GIVEN>
+	<TABLE>0 1000 0 0 0 0 0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>utility_lens</FOR>
+	<GIVEN>healthlens</GIVEN>
+	<GIVEN>What_to_do</GIVEN>
+	<TABLE>0 0 0 0 0 200 0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>utility_tilted_mirror</FOR>
+	<GIVEN>What_to_do</GIVEN>
+	<GIVEN>healthtilted_mirror</GIVEN>
+	<TABLE>0 0 0 2000 0 200 0 0 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>utility_developer_roll</FOR>
+	<GIVEN>What_to_do</GIVEN>
+	<GIVEN>healthdeveloper_roll</GIVEN>
+	<TABLE>0 0 0 0 0 0 0 250 0 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>utility_charge_roll</FOR>
+	<GIVEN>What_to_do</GIVEN>
+	<GIVEN>healthcharge_roll</GIVEN>
+	<TABLE>0 0 0 0 0 0 0 0 0 250 </TABLE>
+</DEFINITION>
+
+</NETWORK>
+</BIF>

@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+
+<BIF VERSION="0.3">
+<NETWORK>
+
+<!-- Variables -->
+<VARIABLE TYPE="nature">
+	<NAME>PresentLaserBeamOutputsLaserDiode</NAME>
+	<PROPERTY>PresentLaserBeamOutputsLaserDiode</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentPowerInputsLaserDiode</NAME>
+	<PROPERTY>PresentPowerInputsLaserDiode</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthLaserDiode</NAME>
+	<PROPERTY>healthLaserDiode</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentLaserBeamOutputsMirror6Sided</NAME>
+	<PROPERTY>PresentLaserBeamOutputsMirror6Sided</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentLaserBeamInputsMirror6Sided</NAME>
+	<PROPERTY>PresentLaserBeamInputsMirror6Sided</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthMirror6Sided</NAME>
+	<PROPERTY>healthMirror6Sided</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentLaserBeamOutputsAcrylicLens</NAME>
+	<PROPERTY>PresentLaserBeamOutputsAcrylicLens</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>PresentLaserBeamInputsAcrylicLens</NAME>
+	<PROPERTY>PresentLaserBeamInputsAcrylicLens</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthAcrylicLens</NAME>
+	<PROPERTY>healthAcrylicLens</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthBeam1</NAME>
+	<PROPERTY>healthBeam1</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>healthBeam2</NAME>
+	<PROPERTY>healthBeam2</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>DecisionReplaceLaserDiode</NAME>
+	<PROPERTY>DecisionReplaceLaserDiode</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>UtilityReplaceLaserDiode</NAME>
+	<PROPERTY>UtilityReplaceLaserDiode</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>DecisionReplaceMirror6Sided</NAME>
+	<PROPERTY>DecisionReplaceMirror6Sided</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>UtilityReplaceMirror6Sided</NAME>
+	<PROPERTY>UtilityReplaceMirror6Sided</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>DecisionReplaceAcrylicLens</NAME>
+	<PROPERTY>DecisionReplaceAcrylicLens</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>UtilityReplaceAcrylicLens</NAME>
+	<PROPERTY>UtilityReplaceAcrylicLens</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="decision">
+	<NAME>DecisionTestObserveHealthAcrylicLens</NAME>
+	<PROPERTY>DecisionTestObserveHealthAcrylicLens</PROPERTY>
+	<OUTCOME>yes</OUTCOME>
+	<OUTCOME>no</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="utility">
+	<NAME>UtilityTestObserveHealthAcrylicLens</NAME>
+	<PROPERTY>UtilityTestObserveHealthAcrylicLens</PROPERTY>
+	<OUTCOME>0</OUTCOME>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>TestOutcomeTestObserveHealthAcrylicLens</NAME>
+	<PROPERTY>TestOutcomeTestObserveHealthAcrylicLens</PROPERTY>
+	<OUTCOME>ok</OUTCOME>
+	<OUTCOME>broken</OUTCOME>
+	<OUTCOME>notdone</OUTCOME>
+</VARIABLE>
+
+<!-- Probability distributions -->
+<DEFINITION>
+	<FOR>PresentLaserBeamOutputsLaserDiode</FOR>
+	<GIVEN>healthLaserDiode</GIVEN>
+	<GIVEN>PresentPowerInputsLaserDiode</GIVEN>
+	<TABLE>1 0 0 1 0 1 0 1 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentPowerInputsLaserDiode</FOR>
+	<TABLE>0.99 0.01 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthLaserDiode</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentLaserBeamOutputsMirror6Sided</FOR>
+	<GIVEN>healthMirror6Sided</GIVEN>
+	<GIVEN>PresentLaserBeamInputsMirror6Sided</GIVEN>
+	<TABLE>1 0 0 1 0 1 0 1 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentLaserBeamInputsMirror6Sided</FOR>
+	<GIVEN>PresentLaserBeamOutputsLaserDiode</GIVEN>
+	<GIVEN>healthBeam1</GIVEN>
+	<TABLE>1 0 0 1 0 1 0 1 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthMirror6Sided</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentLaserBeamOutputsAcrylicLens</FOR>
+	<GIVEN>PresentLaserBeamInputsAcrylicLens</GIVEN>
+	<GIVEN>healthAcrylicLens</GIVEN>
+	<TABLE>1 0 0 1 0 1 0 1 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>PresentLaserBeamInputsAcrylicLens</FOR>
+	<GIVEN>healthBeam2</GIVEN>
+	<GIVEN>PresentLaserBeamOutputsMirror6Sided</GIVEN>
+	<TABLE>1 0 0 1 0 1 0 1 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthAcrylicLens</FOR>
+	<TABLE>0.98 0.02 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthBeam1</FOR>
+	<TABLE>0.9 0.1 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>healthBeam2</FOR>
+	<TABLE>0.9 0.1 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>UtilityReplaceLaserDiode</FOR>
+	<GIVEN>healthLaserDiode</GIVEN>
+	<GIVEN>DecisionReplaceLaserDiode</GIVEN>
+	<TABLE>-300 0 -150 -800 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>UtilityReplaceMirror6Sided</FOR>
+	<GIVEN>healthMirror6Sided</GIVEN>
+	<GIVEN>DecisionReplaceMirror6Sided</GIVEN>
+	<TABLE>-301 0 -151 -800 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>UtilityReplaceAcrylicLens</FOR>
+	<GIVEN>DecisionReplaceAcrylicLens</GIVEN>
+	<GIVEN>healthAcrylicLens</GIVEN>
+	<TABLE>-302 0 -152 -800 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>UtilityTestObserveHealthAcrylicLens</FOR>
+	<GIVEN>DecisionTestObserveHealthAcrylicLens</GIVEN>
+	<TABLE>-100 0 </TABLE>
+</DEFINITION>
+<DEFINITION>
+	<FOR>TestOutcomeTestObserveHealthAcrylicLens</FOR>
+	<GIVEN>DecisionTestObserveHealthAcrylicLens</GIVEN>
+	<GIVEN>healthAcrylicLens</GIVEN>
+	<TABLE>1 0 0 0 0 1 0 1 0 0 0 1 </TABLE>
+</DEFINITION>
+
+</NETWORK>
+</BIF>
